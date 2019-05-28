@@ -22,7 +22,12 @@ $(document).ready(function() {
       if (event.key === tone.key) {
         audio[0].load();
         audio[0].play();
+        note.addClass('active');
       }
+    });
+
+    $('body').keyup(event => {
+      note.removeClass('active');
     });
   });
 });
